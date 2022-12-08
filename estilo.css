@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Sriracha&display=swap');
+
+body{
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+body *{
+    box-sizing: border-box;
+}
+.main-login{
+    width: 100vw;
+    height: 100vh;
+    background-color: #201b2c;
+    display: flex;                           /*   Fez com que as div's left e rigth ficassem uma ao lado da outra*/
+    justify-content: center;                        /*alinha o texto horizontalmente (eixo X)*/
+    align-items: center;                            /*alinha o texto verticalmente (eixo Y)*/
+
+}
+
+.left-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left-login > h1 {
+    color: #77ffc0;
+}
+
+.rigth-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-login{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;                   /*   Colocar os itens abaixo do outro         */
+    padding: 30px 40px;                      /*    30px para eixo Y / 40px para eixo X   */
+    background: #2f2841; 
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
+}
+
+.card-login > h1 {
+    color: #00ff88;
+    font-weight: 800;
+    font-size: 3vw;
+    margin: 0;
+
+}
+
+.left-login-image{
+    width: 35vw;
+}
+
+.text-field{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+}
+
+.text-field > input{
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    background: #514869;
+    color: #f0ffffde;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;  
+    box-sizing: border-box;                              /*   RETIRAR CAIXA DE SELEÇÃO EM VOLTA    */
+}
+
+.text-field > label{
+    color: #f0ffffde;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.text-field > input::placeholder{
+    color: #f0ffffde;
+}
+
+.button-login{
+   width: 100%;
+   padding: 10px 0px;
+   margin: 25px;
+   border: none;
+   border-radius: 10px;
+   box-sizing: border-box;
+   outline: none;
+   text-transform: uppercase;
+   font-weight: 800;
+   letter-spacing: 2px;                             /*   GERAR ESPAÇAMENTOS ENTRE OS CARACTERES!   */
+   color: #2b134b;  
+   background-color: #00ff88;        
+   cursor: pointer;                                  /*  Gerar mão de cursor ao parar  no elemento*/
+   box-shadow: 0px 10px 40px #00ff8052;      
+
+}
+
+.button-login:hover{
+    background-color: #514869;
+    color: #00ff88;
+}
+
+@media only screen and (max-width: 950px){
+    .card-login{
+        width: 85%;
+    }
+
+}
+
+@media only screen and (max-width: 600px){
+    .main-login{
+        flex-direction: column;
+        height: 100vh;
+    }
+    .left-login > h1{
+        display: none;
+    }
+    .card-login{
+        width: 100%;
+     
+    }
+    .card-login > h1{
+        font-size: 1.3em;
+    }
+    .left-login{
+        width: 100%;
+        height: auto;
+    }
+    .rigth-login{
+        width: 100%;
+        height: auto;
+    }
+    .left-login-image{
+        width: 60vw;
+      
+    }
+}
+
